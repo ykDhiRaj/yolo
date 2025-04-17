@@ -99,11 +99,11 @@ export default function scooter() {
         <div className="mt-10 px-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
             {[...Array(4)].map((_, i) => (
-              <Card key={i} className="w-full max-w-[300px]" onClick={()=> handleClick(i.toString())}>
+              <Card key={i} className="w-full max-w-[300px]" >
                 <CardContent className="p-0">
                   <ImageSwiper images={images} />
                 </CardContent>
-                <CardHeader>
+                <CardHeader className="cursor-pointer" onClick={()=> handleClick(i.toString())}>
                   <CardTitle className="text-lg font-semibold">Goa</CardTitle>
                   <p className="text-sm text-muted-foreground">
                     5000 Kilometers away
